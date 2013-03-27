@@ -6,14 +6,27 @@
  */
 var defaults = {
 	0:{
-		url:"https://google.com",
-		describtion:"Codes bellow are injected into URL above",
-		js:'alert("This is a sample injection to Google. To modify this injection, go to JS-Injector\'s options page. JS-Injector");'
+		url:"Domain",
+		describtion:"Describtion",
+		js:'$(function(){\n\n\t//sample code to run at the end of page\n\n});'
 	},
 	1:{
-		url:"http://yahoo.com",
-		describtion:"test default item inject",
-		js:"alert(1);"
+		url:"stackoverflow.com",
+		describtion:"This brings \"tags\" at the top of the stackoverflow's sidebar, to have an easier access.",
+		//js:"alert(1);"
+		js:'$("#interesting-tags").prependTo($("#interesting-tags").parent());'
+	},
+	2:{
+		url:"plus.url.google.com",
+		describtion:"This will change Google''s http to httpS",
+		//js:"alert(1);"
+		js:'$(function(){window.location = window.location.toString().replace(/^http/, \'https\');});'
+	},
+	3:{
+		url:"googleusercontent.com",
+		describtion:"This will change Google''s http to httpS",
+		//js:"alert(1);"
+		js:'$(function(){window.location = window.location.toString().replace(/^http/, \'https\');});'
 	}
 };
 

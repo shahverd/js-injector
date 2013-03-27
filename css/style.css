@@ -10,10 +10,15 @@
 }
 body{
 	background:#ededed;
+	min-width:800px;
+	padding:20px;
 }
 header{
 	min-height:100px;
 	padding:10px;
+}
+header h6{
+	font-style:italic;
 }
 footer{
 	min-height:100px;

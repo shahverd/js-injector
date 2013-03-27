@@ -7,8 +7,9 @@
 chrome.extension.sendMessage({method:"get_injects"},function(injects){
 	for(index in injects){
 		if(/^items\./.test(index)){
-			itemJSON = JSON.parse(injects[index]);
-			if(window.location.toString().indexOf(itemJSON.url) == 0){
+			itemJSON = injects[index];
+			//if(window.location.host.toString().indexOf(itemJSON.url)){
+			if(window.location.host.toString().match(itemJSON.url + '$')){
 				var js = itemJSON.js.toString();
 				eval(js);
 			}
