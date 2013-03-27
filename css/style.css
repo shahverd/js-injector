@@ -1,0 +1,123 @@
+*{
+	/*border:solid green 1px;*/
+	padding:0px;
+	margin:0px;
+	-webkit-box-sizing: border-box;
+     	-moz-box-sizing: border-box;
+        box-sizing: border-box;
+	text-decoration:none;
+	font-family:ubuntu;
+}
+body{
+	background:#ededed;
+}
+header{
+	min-height:100px;
+	padding:10px;
+}
+footer{
+	min-height:100px;
+	padding:10px;
+}
+#main{
+	border-top:2px solid #dfd7cf;
+	border-bottom:2px solid #dfd7cf;
+}
+#sidebar{
+	padding:15px;
+	width:25%;
+	float:left;
+}
+#sidebar ul li{
+	padding:10px;
+	cursor:pointer;
+	list-style:none;
+	border-radius: 5px;
+}
+.selected{
+	background:#0f67a1;
+	color:#ededed;
+	font-weight:bold;
+}
+#container{
+	float:left;
+	width:75%;
+	min-height:300px;
+	border-left:2px solid #dfd7cf;
+}
+.pane{
+	display:none;
+}
+.minimized{
+	display:none;
+}
+.block{
+	display:block;
+}
+.list_item{
+	border:1px solid #9cd2f5;
+	margin:3px;
+	border-radius: 5px;
+}
+.list_item .title{
+	display:block;
+}
+.list_item input, .list_item textarea{
+	border:0px;
+	width:100%;
+	padding:10px;
+	background:transparent;
+}
+.list_item button {
+	padding:2px;
+	float:right;
+	margin:10px;
+}
+.list_item textarea{
+	min-height:200px;
+}
+.list_item .describtion input{
+	font-size:10px;
+	font-style:italic;
+}
+.list_item .title input{
+	font-weight:bold;
+}
+.list_item input:focus, .list_item textarea:focus{
+	border:1px solid #0f67a1;
+	background:white;
+}
+/*********************************/
+
+.export div{
+	padding:10px;
+}
+.export span{
+	margin:10px;
+	padding:10px;
+	border-radius:5px;	
+	background:#0f67a1;
+	color:#ededed;
+	font-weight:bold;
+	cursor:pointer;
+}
+.import div{
+	padding:10px;
+}
+.import span, .import input[type=file]{
+	margin:10px;
+	padding:10px;
+	border-radius:5px;	
+	background:#0f67a1;
+	color:#ededed;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+
+.about {
+	padding: 10px;
+}
+.about p{
+	padding-bottom:20px;
+}

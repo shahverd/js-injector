@@ -1,0 +1,29 @@
+{
+  "name": "__MSG_extName__",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
+  "icons": {
+    "16": "img/icon16.png",
+    "32": "img/icon32.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+  "permissions": ["tabs", "https://*/*", "http://*/*"],
+  "background":{
+  	"scripts":["js/jq.js", "js/settings.js"]
+  },
+   "browser_action": {
+      "default_icon": "img/icon32.png",
+      "popup": "options.html"
+   },
+  "options_page": "options.html",
+  "content_scripts": [{
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/jq.js", "js/inject.js"],
+//      "css": ["css/extended_injection.css"],
+      "run_at": "document_start",
+      "all_frames": true
+  }]
+}

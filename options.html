@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<title>JS-Injector::Options</title>
+		<meta charset="utf8">
+		<link rel="stylesheet" href="css/style.css"> 
+		<script src="/js/jq.js"></script>
+		<script src="/js/options.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Javascript Injector</h1>
+			<h5>Inject whatever you want into wherever you want!</h5>
+		</header>
+		<div id="main">
+
+			<div id="sidebar">
+				<UL>
+					<li related_pane="create">Create New</li>
+					<li related_pane="list">List All</li>
+					<li related_pane="export">Export</li>					
+					<li related_pane="import">Import</li>
+					<li related_pane="about">About</li>
+				</UL>
+			</div>
+			<div id="container">
+				<div class="pane list">
+					<div class="list_item minimized template">
+						<form>
+						<div class="title url"><input></div>
+						<div class="describtion minimized"><input></div>
+						<div class="js minimized"><textarea></textarea></div>
+						<div class="minimized"><button>Delete</button></div>
+						<div style="clear:both"></div>
+						</form>
+					</div>
+				</div>
+				<div class="pane create">
+					<div class="list_item minimized template">
+						<form>
+						<div class="title url"><input></div>
+						<div class="describtion minimized"><input></div>
+						<div class="js minimized"><textarea></textarea></div>
+						<div class="minimized"><button><b>Add</b></button></div>
+						<div style="clear:both"></div>
+						</form>
+					</div>
+				</div>
+				<div class="pane export">
+					<div>
+						<p>Using this option you can export your injections into a file, to use them on some other systems.</p>	
+					</div>
+					<div>
+						<span>Generate And Download File</span>
+					</div>
+				</div>
+				<div class="pane import">
+					<div>
+						<p>Using this option you can import your prevoiusly exported injections from a file to this systems.</p>	
+					</div>
+					<div>
+						<span>Import From File</span>
+						<input type="file" id="fileinput">
+					</div>
+				</div>
+				<div class="pane about">
+					<h3>What Can You Do?</h3>
+					<p>
+						Using this extension you will be able to inject javascript codes into webpages, in order to customize your most visiting websites, to have a more confortable web browsing.
+					</p>
+					<p>
+						In order to do so, create new Inject from create menu. You have to provide "URL", "Describtion" and "Javascript Code" that you want to inject. After creating an Inject, then Your Javascript Codes will run <b>right before page is loaded</b>.
+					</p>
+					<h3>Developed By</h3>
+					<p>
+					Developed by <span><a href="http://mostafa.info">Mostafa Shahverdy</a></span>, Source Code available at <a href="">github.com</a>.
+					</p>
+				</div>
+			</div>
+
+			<div style="clear:both"></div>
+		</div>
+
+		<footer>
+		<h5><a href="http://mostafa.info">2013-Present © Mostafa Shahverdy</a></h5>
+		</footer>
+	</body>	
+</html>
