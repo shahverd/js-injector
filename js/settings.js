@@ -6,24 +6,24 @@
  */
 var defaults = {
 	0:{
-		url:"Domain",
+		url:"URL",
 		describtion:"Describtion",
 		js:'$(function(){\n\n\t//sample code to run at the end of page\n\n});'
 	},
 	1:{
-		url:"stackoverflow.com",
+		url:"http://stackoverflow.com",
 		describtion:"This brings \"tags\" at the top of the stackoverflow's sidebar, to have an easier access.",
 		//js:"alert(1);"
 		js:'$("#interesting-tags").prependTo($("#interesting-tags").parent());'
 	},
 	2:{
-		url:"plus.url.google.com",
+		url:"http://plus.url.google.com",
 		describtion:"This will change Google''s http to httpS",
 		//js:"alert(1);"
 		js:'$(function(){window.location = window.location.toString().replace(/^http/, \'https\');});'
 	},
 	3:{
-		url:"googleusercontent.com",
+		url:"http://.*\.googleusercontent.com",
 		describtion:"This will change Google''s http to httpS",
 		//js:"alert(1);"
 		js:'$(function(){window.location = window.location.toString().replace(/^http/, \'https\');});'

@@ -10,7 +10,7 @@
     "48": "img/icon48.png",
     "128": "img/icon128.png"
   },
-  "permissions": ["tabs", "https://*/*", "http://*/*"],
+  "permissions": ["tabs", "https://*/*", "http://*/*", "storage"],
   "background":{
   	"scripts":["js/jq.js", "js/settings.js"]
   },
