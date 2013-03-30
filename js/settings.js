@@ -23,8 +23,14 @@ var defaults = {
 		js:'$(function(){window.location = window.location.toString().replace(/^http/, \'https\');});'
 	},
 	3:{
-		url:"http://.*\.googleusercontent.com",
+		url:"http://.*[\.]googleusercontent.com",
 		describtion:"This will change Google''s http to httpS",
+		//js:"alert(1);"
+		js:'$(function(){window.location = window.location.toString().replace(/^http/, \'https\');});'
+	},
+	4:{
+		url:"http://.*[\.]youtube.com",
+		describtion:"This will change Youtube's http to httpS",
 		//js:"alert(1);"
 		js:'$(function(){window.location = window.location.toString().replace(/^http/, \'https\');});'
 	}
