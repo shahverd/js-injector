@@ -15,3 +15,6 @@ In order to install this extension go to your extension page at chrome://extensi
 
 ![Screenshot](https://github.com/shahverdy/JS-Injector/raw/master/img/Screenshot.png)
 
+
+
+[![Trending](https://d2weczhvl823v0.cloudfront.net/shahverdy/js-injector/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
