@@ -4,11 +4,11 @@
  * @author Mostafa Shahverdy 2013 (http://mostafa.info)
  * @constructor
  */
-var _ = function(str){ return chrome.i18n.getMessage(str)}
+var _ = str => chrome.i18n.getMessage(str)
 
-var Options = new function(){}
+var Options = new () => {}
 
-Options.init_list = function(){
+Options.init_list = () => {
 	//to draw items one by one
 	for(index in localStorage){
 
@@ -54,9 +54,9 @@ Options.init_list = function(){
 	}
 }
 
-Options.init_create = function(){
+Options.init_create = () => {
 
-	chrome.extension.sendMessage({method:"get_defaults"},function(defaults){
+	chrome.extension.sendMessage({method:"get_defaults"},defaults => {
 		for(index in defaults){
 			itemJSON = defaults[index];
 
@@ -89,7 +89,7 @@ Options.init_create = function(){
 }
 
 
-Options.init_sidebar = function(){
+Options.init_sidebar = () => {
 
 	$("#sidebar li").click(function(){
 		$("#container .pane").removeClass('block');
@@ -102,8 +102,8 @@ Options.init_sidebar = function(){
 	$("#sidebar ul li[related_pane='list']").click();
 }
 
-Options.init_export = function(){
-	chrome.extension.sendMessage({method:"get_injects"},function(injects){
+Options.init_export = () => {
+	chrome.extension.sendMessage({method:"get_injects"},injects => {
 		//for(index in injects){
 		//alert(JSON.stringify(injects[index]));
 		//}
@@ -116,7 +116,7 @@ Options.init_export = function(){
 	});
 }
 
-Options.init_import = function(){
+Options.init_import = () => {
 	function readMultipleFiles(evt) {
 		//Retrieve all the files from the FileList object
 		//alert(11);
@@ -125,21 +125,19 @@ Options.init_import = function(){
 		if (files) {
 			for (var i = 0, f; f = files[i]; i++) {
 			var r = new FileReader();
-			r.onload = (function (f) {
-				return function (e) {
-					var contents = e.target.result;
-					$('.pane').filter('.import').find('span').click(function(){
-						injects = JSON.parse(contents);
-						for(index in injects){
-							//alert(index);
-							//alert(injects[index]);
-							//alert(JSON.stringify(injects[index]));
-							localStorage[index] = JSON.stringify(injects[index]);
-							window.location = window.location;
-						}
-					});
-				};
-			})(f);
+			r.onload = ((f => e => {
+                var contents = e.target.result;
+                $('.pane').filter('.import').find('span').click(() => {
+                    injects = JSON.parse(contents);
+                    for(index in injects){
+                        //alert(index);
+                        //alert(injects[index]);
+                        //alert(JSON.stringify(injects[index]));
+                        localStorage[index] = JSON.stringify(injects[index]);
+                        window.location = window.location;
+                    }
+                });
+            }))(f);
 			r.readAsText(f);
 			}
 		} else {
@@ -148,7 +146,7 @@ Options.init_import = function(){
 	}
 	document.getElementById('fileinput').addEventListener('change', readMultipleFiles, false);
 }
-Options.init_about = function(){
+Options.init_about = () => {
 
 	//for(var i=1; i< 4; i++){
 		//rect = $("<div></div>");
@@ -161,18 +159,18 @@ Options.init_about = function(){
 	//}
 }
 
-Options.init = function(){
+Options.init = () => {
 	Options.init_create();
 	Options.init_list();
 	Options.init_sidebar();
 	Options.init_import();
 	Options.init_about();
 
-	$('.pane').filter('.export').find('span').click(function(){
+	$('.pane').filter('.export').find('span').click(() => {
 		Options.init_export();
 	});
 }
 
-$(function(){
+$(() => {
 	Options.init();
 });

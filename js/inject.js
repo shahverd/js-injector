@@ -4,7 +4,7 @@
  * @author Mostafa Shahverdy 2013 (http://mostafa.info)
  * @constructor
  */
-chrome.extension.sendMessage({method:"get_injects"},function(injects){
+chrome.extension.sendMessage({method:"get_injects"},injects => {
 	for(index in injects){
 		if(/^items\./.test(index)){
 			itemJSON = injects[index];
