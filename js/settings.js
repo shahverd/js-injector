@@ -37,8 +37,7 @@ var defaults = {
 };
 
 
-chrome.extension.onMessage.addListener(function(request,sender,sendResponse)
-{
+chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
 	if(request.method == "get_injects"){
 		var injects = {};
 		for(index in localStorage){
